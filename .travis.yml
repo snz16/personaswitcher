@@ -1,12 +1,16 @@
+dist: trusty
 language: node_js
 node_js:
-  - "12.14.1"
+  - "stable"
+
+before_install:
+  - npm install -g web-ext
 
 addons:
   sonarcloud:
-    organization: "snz16" # the key of the org you chose at step #3
+    organization: "snz16"
     token: $SONAR_TOKEN
 
 script:
-  - npm run lint
+  - web-ext lint
   - sonar-scanner
