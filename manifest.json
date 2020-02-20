@@ -68,7 +68,8 @@
         "storage",
         "alarms",
         "menus",
-        "management"
+        "management",
+        "theme"
     ],
     "short_name": "__MSG_extensionShortName__",
     "version": "5.0.5"
